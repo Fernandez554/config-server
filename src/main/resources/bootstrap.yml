@@ -1,0 +1,28 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Fernandez554/repositorio-config-server-files.git
+          username: fernandez554
+          password: '{cipher}c5fb62b2ffa1829f07383026f7b890285f782499faab2dfc5ae5e185f877d01995bf509146ad466342f67a0e90900245e803dcb202de5e0a5b92928936d21b609ac1a4427706eabdab81924687693ae2d74e4325c63c9ebcf1d8ab001a0e04e758c5498658245df34fd642912cd0ccad'
+          defaultLabel: master
+          cloneOnStart: true
+          refreshRate: 30
+        encrypt:
+          enabled: true
+encrypt:
+  key: "jwTRK7S)AEqq#U8r"
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
